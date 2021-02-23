@@ -1,9 +1,11 @@
 name: Test Package
 
 on:
+  # Trigger the workflow on push or pull request,
+  # but only for the master branch
   push:
-    branches-ignore: # https://stackoverflow.com/questions/57699839/github-actions-how-to-target-all-branches-except-master
-      - master # excludes master (since it deploys the code already)
+    branches:
+      - master
 
 jobs:
   test:
