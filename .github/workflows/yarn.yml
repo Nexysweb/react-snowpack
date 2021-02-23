@@ -1,0 +1,18 @@
+name: Test Package
+
+on:
+  push:
+    branches-ignore: # https://stackoverflow.com/questions/57699839/github-actions-how-to-target-all-branches-except-master
+      - master # excludes master (since it deploys the code already)
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 13
+      - run: yarn
+      - run: yarn build
+      - run: yarn test
