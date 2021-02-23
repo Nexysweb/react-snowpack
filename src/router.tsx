@@ -16,12 +16,13 @@ import App from "./styled";
 
 const App2 = () => (
   <p>
-    app <Link to="/public">to public gfds fds</Link>
+    app <Link to="/public">to public hello dev</Link>
   </p>
 );
 const Public = () => (
   <p>
-    public <Link to="/app">to app</Link> and some more text
+    public <Link to="/app">to app</Link> and some more text and hello dev really
+    fast
   </p>
 );
 
