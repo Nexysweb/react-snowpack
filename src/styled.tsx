@@ -26,7 +26,7 @@ const Greeting = styled.h2`
 
 const App = () => {
   const logo =
-    "https://res.cloudinary.com/practicaldev/image/fetch/s--tARdF4Og--/c_fill,f_auto,fl_progressive,h_320,q_auto,w_320/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/139970/364b4ef9-bc61-4e48-9758-8d2af0862ee8.png";
+    "https://avatars.githubusercontent.com/u/3129983?s=60&v=4";
   return (
     <Wrapper>
       <Title>my first snowpack+react app</Title>
