@@ -1,0 +1,14 @@
+{
+  "imports": {
+    "@material-ui/core": "./@material-ui/core.js",
+    "@material-ui/core/styles": "./@material-ui/core/styles.js",
+    "@material-ui/core/styles/createMuiTheme": "./@material-ui/core/styles/createMuiTheme.js",
+    "@material-ui/icons": "./@material-ui/icons.js",
+    "@material-ui/lab/Alert": "./@material-ui/lab/Alert.js",
+    "history": "./history.js",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js",
+    "react-router-dom": "./react-router-dom.js",
+    "styled-components": "./styled-components.js"
+  }
+}
