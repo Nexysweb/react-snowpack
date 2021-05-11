@@ -1,5 +1,7 @@
 import React from "react";
 
+import Top from "./layout/top";
+
 import {
   Link,
   Switch,
@@ -10,7 +12,7 @@ import {
 } from "react-router-dom";
 import * as History from "history";
 
-import { SnackbarProvider } from "@nexys/material-components";
+//import { SnackbarProvider } from "@nexys/material-components";
 
 import App from "./styled";
 
@@ -30,10 +32,13 @@ const history = History.createBrowserHistory({});
 
 const MyRouter = (props: RouteComponentProps) => {
   return (
-    <Switch>
-      <Route path="/app" component={App} props={props} />
-      <Route path="/" component={Public} props={props} />
-    </Switch>
+    <>
+      <Top />
+      <Switch>
+        <Route path="/app" component={App} props={props} />
+        <Route path="/" component={Public} props={props} />
+      </Switch>
+    </>
   );
 };
 
