@@ -1,6 +1,8 @@
 import React from "react";
 
 import Top from "./layout/top";
+import Alert from "./alert";
+import Btn from "./button";
 
 import {
   Link,
@@ -34,6 +36,8 @@ const MyRouter = (props: RouteComponentProps) => {
   return (
     <>
       <Top />
+      <Alert />
+      <Btn />
       <Switch>
         <Route path="/app" component={App} props={props} />
         <Route path="/" component={Public} props={props} />

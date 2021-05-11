@@ -18,9 +18,8 @@ const appTitle = "myapp";
   },
 }));*/
 
-export default (props: { isOpen: boolean; onToggle: any }) => {
-  const { isOpen, onToggle } = props;
-
+export default () => {
+  //props: { isOpen: boolean; onToggle: any }
   const menus = [
     { link: "/app/profile", Icon: UserIcon },
     { link: "/logout", Icon: LogoutIcon },
@@ -28,7 +27,7 @@ export default (props: { isOpen: boolean; onToggle: any }) => {
   //const classes = useStyles();
 
   return (
-    <p>fds</p>
+    <p>fdghjs</p>
     /* <Top
       title={appTitle}
       menus={menus}
