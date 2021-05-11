@@ -24,7 +24,7 @@
     "typescript": "^4.1.5"
   },
   "scripts": {
-    "start": "snowpack dev",
+    "start": "SNOWPACK_PUBLIC_URL= snowpack dev",
     "build": "snowpack build",
     "test": "jest"
   }
