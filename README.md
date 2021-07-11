@@ -8,3 +8,5 @@
 * set proxy:https://www.snowpack.dev/guides/routing
 * get started https://www.snowpack.dev/tutorials/react
 * https://github.com/snowpackjs/snowpack/discussions/2652
+
+example with snowpack, react, typescript and material UI
