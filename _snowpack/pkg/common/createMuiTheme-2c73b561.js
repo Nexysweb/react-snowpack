@@ -1,5 +1,5 @@
 import { c as createCommonjsModule, g as getDefaultExportFromCjs } from './_commonjsHelpers-913f9c4a.js';
-import { b as _typeof, d as deepmerge, h as handleBreakpoints, a as _defineProperty, m as merge, _ as _toConsumableArray, e as breakpoints, s as spacing, c as createUnarySpacing } from './spacing-abd0c48b.js';
+import { b as _typeof, d as deepmerge, h as handleBreakpoints, a as _defineProperty, m as merge, _ as _toConsumableArray, e as breakpoints, s as spacing, c as createUnarySpacing } from './spacing-fbdb7fec.js';
 import { p as propTypes } from './index-9a858da8.js';
 import { r as reactIs } from './index-3e8524ab.js';
 import { _ as _extends } from './extends-7477639a.js';
@@ -288,7 +288,7 @@ function omit(input, fields) {
   return output;
 }
 
-function css(styleFunction) {
+function styleFunctionSx(styleFunction) {
   var newStyleFunction = function newStyleFunction(props) {
     var output = styleFunction(props);
 
@@ -298,12 +298,29 @@ function css(styleFunction) {
       }, props.css))), omit(props.css, [styleFunction.filterProps]));
     }
 
+    if (props.sx) {
+      return _extends({}, merge(output, styleFunction(_extends({
+        theme: props.theme
+      }, props.sx))), omit(props.sx, [styleFunction.filterProps]));
+    }
+
     return output;
   };
 
   newStyleFunction.propTypes =  {};
-  newStyleFunction.filterProps = ['css'].concat(_toConsumableArray(styleFunction.filterProps));
+  newStyleFunction.filterProps = ['css', 'sx'].concat(_toConsumableArray(styleFunction.filterProps));
   return newStyleFunction;
+}
+/**
+ *
+ * @deprecated
+ * The css style function is deprecated. Use the `styleFunctionSx` instead.
+ */
+
+
+function css(styleFunction) {
+
+  return styleFunctionSx(styleFunction);
 }
 
 var displayPrint = style({
@@ -520,7 +537,7 @@ var textAlign = style({
 });
 var typography = compose(fontFamily, fontSize, fontStyle, fontWeight, letterSpacing, lineHeight, textAlign);
 
-/** @license Material-UI v4.11.3
+/** @license Material-UI v4.12.1
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -531,7 +548,7 @@ var esm$1 = /*#__PURE__*/Object.freeze({
   borders: borders,
   breakpoints: breakpoints,
   compose: compose,
-  css: css,
+  styleFunctionSx: styleFunctionSx,
   display: display,
   flexbox: flexbox,
   grid: grid,
@@ -549,6 +566,7 @@ var esm$1 = /*#__PURE__*/Object.freeze({
   borderLeft: borderLeft,
   borderColor: borderColor,
   borderRadius: borderRadius,
+  css: css,
   flexBasis: flexBasis,
   flexDirection: flexDirection,
   flexWrap: flexWrap,

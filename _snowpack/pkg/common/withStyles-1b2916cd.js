@@ -3,7 +3,7 @@ import { _ as _objectWithoutPropertiesLoose, a as _inheritsLoose } from './inher
 import { r as react } from './index-b5a56d46.js';
 import './index-9a858da8.js';
 import { h as hoistNonReactStatics_cjs } from './hoist-non-react-statics.cjs-3f14c29b.js';
-import { _ as _toConsumableArray, d as deepmerge } from './spacing-abd0c48b.js';
+import { _ as _toConsumableArray, d as deepmerge } from './spacing-fbdb7fec.js';
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
@@ -257,7 +257,7 @@ function toCss(selector, style, options) {
 
           if (value != null) {
             if (result) result += '\n';
-            result += "" + indentStr(prop + ": " + toCssValue(value) + ";", indent);
+            result += indentStr(prop + ": " + toCssValue(value) + ";", indent);
           }
         }
       }
@@ -268,7 +268,7 @@ function toCss(selector, style, options) {
 
         if (_value != null) {
           if (result) result += '\n';
-          result += "" + indentStr(_prop + ": " + toCssValue(_value) + ";", indent);
+          result += indentStr(_prop + ": " + toCssValue(_value) + ";", indent);
         }
       }
     }
@@ -279,7 +279,7 @@ function toCss(selector, style, options) {
 
     if (_value2 != null && _prop2 !== 'fallbacks') {
       if (result) result += '\n';
-      result += "" + indentStr(_prop2 + ": " + toCssValue(_value2) + ";", indent);
+      result += indentStr(_prop2 + ": " + toCssValue(_value2) + ";", indent);
     }
   } // Allow empty style in this case, because properties will be added dynamically.
 
@@ -1601,7 +1601,8 @@ var createGenerateId = function createGenerateId(options) {
   }
 
   var ruleCounter = 0;
-  return function (rule, sheet) {
+
+  var generateId = function generateId(rule, sheet) {
     ruleCounter += 1;
 
     var jssId = '';
@@ -1624,6 +1625,8 @@ var createGenerateId = function createGenerateId(options) {
 
     return prefix + rule.key + "-" + moduleId + (jssId ? "-" + jssId : '') + "-" + ruleCounter;
   };
+
+  return generateId;
 };
 
 /**
@@ -2087,7 +2090,7 @@ var Jss =
 function () {
   function Jss(options) {
     this.id = instanceCounter++;
-    this.version = "10.6.0";
+    this.version = "10.7.1";
     this.plugins = new PluginsRegistry();
     this.options = {
       id: {

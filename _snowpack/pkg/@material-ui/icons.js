@@ -1,13 +1,13 @@
 import { r as react } from '../common/index-b5a56d46.js';
 import { _ as _extends } from '../common/extends-7477639a.js';
-import { S as SvgIcon } from '../common/SvgIcon-0dfec723.js';
+import { S as SvgIcon } from '../common/SvgIcon-24dd689d.js';
 import '../common/_commonjsHelpers-913f9c4a.js';
-import '../common/withStyles-75c44533.js';
+import '../common/withStyles-1b2916cd.js';
 import '../common/inheritsLoose-c86d473e.js';
 import '../common/index-9a858da8.js';
 import '../common/hoist-non-react-statics.cjs-3f14c29b.js';
-import '../common/spacing-abd0c48b.js';
-import '../common/capitalize-d93119ea.js';
+import '../common/spacing-fbdb7fec.js';
+import '../common/capitalize-b5bd7755.js';
 
 function createSvgIcon(path, displayName) {
   var Component = react.memo(react.forwardRef(function (props, ref) {
